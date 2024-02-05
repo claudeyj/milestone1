@@ -1,0 +1,12 @@
+diff --color -ur buggy/obdalib-core/src/main/java/it/unibz/krdb/sql/QuotedID.java fixed/obdalib-core/src/main/java/it/unibz/krdb/sql/QuotedID.java
+--- buggy/obdalib-core/src/main/java/it/unibz/krdb/sql/QuotedID.java	2024-02-05 11:19:17.636563955 -0600
++++ fixed/obdalib-core/src/main/java/it/unibz/krdb/sql/QuotedID.java	2024-02-05 11:22:58.399423146 -0600
+@@ -69,7 +69,7 @@
+ 	 * @return
+ 	 */
+ 	
+-	public static QuotedID createFromDatabaseRecord(String s) {
++	public static QuotedID createIdFromDatabaseRecord(String s) {
+ 		// ID is as though it is quoted -- DB stores names as is 
+ 		return new QuotedID(s, QUOTATION);
+ 	}
